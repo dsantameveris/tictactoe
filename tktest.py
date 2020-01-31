@@ -1,5 +1,16 @@
-import tkinter
+import tkinter as tk
+import sys
 
-top = tkinter.Tk()
+#This is the root
+root = tk.Tk()
 
-top.mainloop()
+def quit():
+    sys.exit()
+
+label = tk.Label(root, text = "Press to quit")
+label.pack()
+
+button = tk.Button(root, text = "Quit", command = quit)
+button.pack()
+
+root.mainloop()
